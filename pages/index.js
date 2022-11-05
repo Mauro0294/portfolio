@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import Head from 'next/head'
+import Link from 'next/link'
 
 const Name = styled.span`
     color: rgb(14, 182, 238);
@@ -27,7 +28,7 @@ const Body = styled.body`
 const Button = styled.button`
     margin-top: 3rem;
     border: 1px solid white;
-    padding: 2rem;
+    padding: 0.75rem;
     background: none;
     color: white;
     background: none;
@@ -41,19 +42,17 @@ const Button = styled.button`
 `
 
 export default function Home() {
-  return (
-    <>
-    <html>
-        <Head>
-            <title>Home</title>
-        </Head>
-        <Body>
-            <Wrapper>
-                <span>Hello, I'm <Name>Mauro Scheltens</Name><br></br> I'm a Full-Stack Web Developer</span>
-                <Button>View my portfolio</Button>
-            </Wrapper>
-        </Body>
-    </html>
-    </>
+    return (
+        <>
+            <Head>
+                <title>Home</title>
+            </Head>
+            <Body>
+                <Wrapper>
+                    <span>Hello, I'm <Name>Mauro Scheltens</Name><br></br> I'm a Full-Stack Web Developer</span>
+                    <Button><Link href='projects'>View my portfolio</Link></Button>
+                </Wrapper>
+            </Body>
+        </>
   )
 }
